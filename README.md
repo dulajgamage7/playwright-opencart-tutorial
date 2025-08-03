@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # End-to-End Automation Framework with Playwright by adhering POM, Gherkin syntax with Playwright Steps & CI/CD👋
 
 
@@ -113,4 +111,3 @@ Happy testing & may your bugs be shallow! 🐞🚀
 =======
 # playwright-opencart-tutorial
 End-to-End Automation Framework with Playwright by adhering POM, Gherkin syntax with Playwright Steps &amp; CI/CD
->>>>>>> 0018c5998865f7ace4902fcaa51baf1ce09712e2
