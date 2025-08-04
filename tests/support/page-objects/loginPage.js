@@ -22,8 +22,8 @@ class LoginPage {
     // Locator for the login button
     this.loginButton = page.locator('button[name="login"]');
 
-    // Locator for the logout button/link (used to verify successful login)
-    this.logoutLink = page.locator('button[name="logout"]');
+    // Locator for the logout button/link)
+    this.logoutButton = page.locator('a:has-text("Logout")');
 
     // Locator for the error message container (shown on failed login)
     this.errorMessage = page.locator(".woocommerce-error");

@@ -24,7 +24,7 @@ test.describe("User Authentication: Login Scenarios", () => {
     });
 
     await test.step("THEN I should be redirected to the dashboard", async () => {
-      await expect(loginPage.logoutLink).toBeVisible(); // Validate user is logged in
+      await expect(loginPage.logoutButton).toBeVisible(); // Validate user is logged in
       await expect(page).toHaveURL(loginData.verifyUrl(page).expectedUrl); // Check correct redirection
     });
   });
