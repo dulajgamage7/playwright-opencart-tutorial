@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A scalable and modular test automation framework built with Playwright. It follows the Page Object Model (POM) design, uses Gherkin syntax with Playwright Steps API, and supports custom fixtures and filters. Integrated with Allure for detailed reporting and Jenkins for automated CI/CD test execution.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "playwright:ui:login": "node_modules\\.bin\\playwright test tests/specs/login.spec.js --ui --project=chromium"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
