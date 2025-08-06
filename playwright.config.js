@@ -1,5 +1,7 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
+const path = require("path");
+const resolvePath = (...segments) => path.resolve(__dirname, ...segments);
 
 /**
  * Read environment variables from file.
@@ -17,8 +19,7 @@ export default defineConfig({
 
   testMatch: [
     "**/specs/*.js", // Regular test files
-    "**/*.setup.js", // Setup files
-    "**/specs/trials/*.js", // Trial files
+ 
   ],
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -29,7 +30,27 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
+  globalSetup: require.resolve(
+    resolvePath("tests", "support", "utils", "report-clean.js")
+  ),
+  reporter: [
+    ["list"],
+    [
+      "html",
+      {
+        outputFolder: "playwright-report",
+        open: "never",
+      },
+    ],
+    [
+      "allure-playwright",
+      {
+        outputFolder: "allure-results",
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+      },
+    ],
+  ],
 
   /* Configure projects for major browsers */
   projects: [
@@ -48,12 +69,26 @@ export default defineConfig({
 
     {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      use: { ...devices["Desktop Firefox"],
+      baseURL: "https://cms.demo.katalon.com",
+      ignoreHTTPSErrors: true,
+      headless: true,
+      viewport: { width: 1920, height: 1080 },
+      trace: "on-first-retry",
+      timeout: 3000,
+      },
     },
 
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"] },
+      use: { ...devices["Desktop Safari"],
+      baseURL: "https://cms.demo.katalon.com",
+      ignoreHTTPSErrors: true,
+      headless: true,
+      viewport: { width: 1920, height: 1080 },
+      trace: "on-first-retry",
+      timeout: 3000,
+      },
     },
 
     /* Test against mobile viewports. */

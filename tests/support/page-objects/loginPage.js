@@ -2,7 +2,6 @@
 
 // Page Object Model for the Login Page
 class LoginPage {
-
   constructor(page) {
     this.page = page;
 
@@ -26,7 +25,7 @@ class LoginPage {
     this.logoutButton = page.locator('a:has-text("Logout")');
 
     // Locator for the error message container (shown on failed login)
-    this.errorMessage = page.locator(".woocommerce-error");
+    this.errorMessages = page.locator(".woocommerce-error");
 
     // Base URL retrieved from the Playwright context configuration
     this.baseUrl = page.context()._options.baseURL;
@@ -37,11 +36,7 @@ class LoginPage {
     await this.page.goto(`${this.baseUrl}/my-account/`);
   }
 
-  /**
-   * Fills in the login form with provided email and password, and checks "Remember Me"
-   * @param {string} email - User email/username
-   * @param {string} password - User password
-   */
+  //Fills in the login form with provided email and password, and checks "Remember Me"
   async login(email, password) {
     await this.usernameInput.fill(email);
     await this.passwordInput.fill(password);
@@ -51,6 +46,10 @@ class LoginPage {
   // Clicks the login button to submit the form
   async clickOnloginButton() {
     await this.loginButton.click();
+  }
+  // Clicks the login button to submit the form
+  errorMessage() {
+    return this.errorMessages;
   }
 }
 
