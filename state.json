@@ -1,0 +1,57 @@
+{
+  "cookies": [
+    {
+      "name": "wordpress_sec_4d8a854e0c8bd1c7f0585d2f4b3ad575",
+      "value": "customer%7C1754599793%7CKk84yb7qrhGvxd1T3UVs5l8RJUA1mcVGVNiEqMZI2cU%7C751cc477abaee929c26d5538d5768ed90957c36130eab8b45db2519fe9bf5b4c",
+      "domain": "cms.demo.katalon.com",
+      "path": "/wp-content/plugins",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_sec_4d8a854e0c8bd1c7f0585d2f4b3ad575",
+      "value": "customer%7C1754599793%7CKk84yb7qrhGvxd1T3UVs5l8RJUA1mcVGVNiEqMZI2cU%7C751cc477abaee929c26d5538d5768ed90957c36130eab8b45db2519fe9bf5b4c",
+      "domain": "cms.demo.katalon.com",
+      "path": "/wp-admin",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "mailchimp_landing_site",
+      "value": "https%3A%2F%2Fcms.demo.katalon.com%2F%3Fwc-ajax%3Dget_refreshed_fragments",
+      "domain": "cms.demo.katalon.com",
+      "path": "/",
+      "expires": 1756846192.696561,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "mailchimp.cart.current_email",
+      "value": "demouser1@gmail.com",
+      "domain": "cms.demo.katalon.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_logged_in_4d8a854e0c8bd1c7f0585d2f4b3ad575",
+      "value": "customer%7C1754599793%7CKk84yb7qrhGvxd1T3UVs5l8RJUA1mcVGVNiEqMZI2cU%7Cc2b1fdbfb24f856c476b112b99c7829ffe539643687b490ddbb3febf4df11ace",
+      "domain": "cms.demo.katalon.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "localStorage": {
+    "wc_cart_hash_a0644adf0ebd0cae87c65647219c3c04": ""
+  }
+}

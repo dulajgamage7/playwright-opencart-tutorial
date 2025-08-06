@@ -1,10 +1,10 @@
 const { test, expect } = require("@playwright/test");
-const { AddToCartPage } = require("../support/page-objects/addToCartPage");
-const { Helper } = require("../support/utils/helper");
+const { AddToCartPage } = require("../support/page-objects/addToCartPage.js");
+const { Helper } = require("../support/utils/helper.js");
 const {
   beforeAllSetup,
   beforeEachSetup,
-} = require("../support/utils/testSetup");
+} = require("../support/utils/testSetup.js");
 let page;
 let addToCart;
 let helper;
